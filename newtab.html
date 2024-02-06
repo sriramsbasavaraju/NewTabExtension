@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/newtab.css'>
+    <script src='js/newtab.js'></script>
+</head>
+
+
+
+<body>
+    <h1>Welcome, </h1>
+
+    <div id = "time"></div>
+    <script>
+        function updateTime() {
+            var currentTime = new Date();
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+            var seconds = currentTime.getSeconds();
+
+            hours = (hours < 10 ? "0" : "") + hours;
+            minutes = (minutes < 10 ? "0" : "") + minutes;
+            seconds = (seconds < 10 ? "0" : "") + seconds;
+
+            var timeString = hours + ":" + minutes + ":" + seconds;
+            document.getElementById("time").outerHTML = timeString;
+            console.log("Hello World");
+        }
+
+        setInterval(updateTime, 1000);
+    </script>
+
+</body>
+
+</html>
