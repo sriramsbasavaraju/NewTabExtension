@@ -1,16 +1,54 @@
-h1 {
-    font-size: 100px;
-}
-
-
-body{
+body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     color: antiquewhite;
     background-image: url("https://source.unsplash.com/random/1920x1080/?dark");
+    height: 100vh;
+    margin: 0;
 }
 
-#time{
-    font-size: 24px;
-    color: black;
+body > #time {
+    animation: fadeIn 10s;
+    animation-fill-mode: forwards;
+    font-size: 250px;
+    color: white;
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.welcome-container {
+    display: flex;
+    align-items: center; /* This will vertically align the text correctly */
+    font-size: 200px;
+    color: white;
+    /* No need for align-self here, it's already centered by the flex on the body */
+}
+
+body > #name{
+    font-size: 200px;
+    margin-left: 10px; /* Adjust as needed for spacing */
+    /* Removed display and align-self, no longer necessary */
+}
+
+.Welcome {
+    /* Removed display and align-self, no longer necessary */
+}
+
+@keyframes fadeIn {
+    1% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes textboxLength {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 50px;
+    }
 }
